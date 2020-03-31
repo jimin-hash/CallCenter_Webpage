@@ -1,0 +1,15 @@
+﻿@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
+div.error {
+    color: #D63301;
+    border-color: #ff936e;
+    background-color: #FFCCBA;
+    background-image: url('https://i.imgur.com/GnyDvKN.png');
+    background-repeat: no-repeat;
+    padding: .25em .4em;
+    border-radius: .25rem;
+}
+
+<div class="alert alert-danger" >
+<strong > Danger!</strong > You should <a href="#" class="alert-link" > read this message</a > .
+</div >

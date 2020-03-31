@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Case 2 - Call</title>
+    <meta charset="utf-8" />
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <meta name="viewport" content="width=device-width , initial-scale=1" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Case #2</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/employee.html">Employees</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/call.html">Call</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/reports.html">Report</a>
+                </li>
+            </ul>
+            <h5><p class="text-white bg-dark">V 2.0</p></h5> &nbsp;&nbsp;
+            <input type="text" class="form-control" id="srch" placeholder="Search" style="width:20vw;" />
+        </div>
+    </nav>
+    <center>
+        <img src="img/helpdesk_1.jpg" alt="helpdeskicon" width="300" vspace="200" style="margin-top:100; margin-bottom:0" />
+        <h1><p class="text-white bg-dark">Calls</p></h1><br/>
+        <h3>v 2.0</h3>
+    </center>
+    <div class="justify-content-center align-items-center row mt-5 ml-1">
+        <div class="col-12 text-center p-3"><h2>Current Calls</h2></div>
+        <div class="list-group col-10" id="callList">
+        </div>
+    </div>
+    <form id="CallModalForm" name="CallModalForm" method="post" action="">
+        <div class="modal fade text-center mr-3" data-backdrop="static" id="theModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header d-block">
+                        <button type="button" class="close float-right" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="modal-title text-center" id="modaltitle"></div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mx-4 my-4">
+                            <div class="card">
+                                <div class="card-header text-center">
+                                    Call Informaion v2.0
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-4">Problem:</div>
+                                        <div class="col-8"><select id="ddlPro" name="ddlPro" class="form-control"></select></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Employee:</div>
+                                        <div class="col-8"><select id="ddlEmp" name="ddlEmp" class="form-control"></select></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Technician:</div>
+                                        <div class="col-8"><select id="ddlTech" name="ddlTech" class="form-control"></select></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Date Opened:</div>
+                                        <div class="col-8"><input type="text" class="form-control" id="dateOpen" name="dateOpen" size="57" disabled /></div>
+                                    </div>
+                                    <div class="row" id="divDateClose">
+                                        <div class="col-4">Date Closed:</div>
+                                        <div class="col-8"><input type="text" class="form-control" id="dateClose" name="dateClose" size="57" disabled /></div>
+                                    </div>
+                                    <div class="row" id="divCloseCall">
+                                        <div class="col-4">Close Call:</div>
+                                        <div class="col-8"><input type="checkbox" id="checkBoxClose" name="checkBoxClose" /></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Notes:</div>
+                                        <div class="col-8"><textarea id="textNotes" class="form-control" name="textNotes" rows="4" cols="60"></textarea></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center">
+                            <input type="button" class="btn btn-secondary" value="Update" id="actionbutton" />
+                            <input type="button" class="btn btn-secondary" data-toggle="confirmation" data-replacement="right" value="Delete" id="deletebutton" /><br />
+                            <div id="modalstatus" class="text-left mt-3 mb-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-confirmation.min.js"></script>
+    <script src="js/call.js"></script>
+</body>
+</html>

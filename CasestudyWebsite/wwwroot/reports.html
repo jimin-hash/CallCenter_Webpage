@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Case 2 - Home</title>
+    <meta charset="utf-8" />
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <meta name="viewport" content="width=device-width , initial-scale=1" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Case #2</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/employee.html">Employees</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/call.html">Call</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/reports.html">Report</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <center>
+        <img src="img/helpdesk_1.jpg" alt="helpdeskicon" width="300" vspace="200" style="margin-top:100; margin-bottom:0" />
+        <h1>Help Desk</h1><br />
+        <h3>v 2.0</h3>
+    </center>
+
+    <div class="card col-10 col-sm-4 text-center mt-5" style="margin:0 auto; float: none;">
+        <div class="card-heading text-center">
+        </div>
+        <div class="card-body">
+            <input type="button" class="btn btn-secondary" value="Employees Report" id="employeeReport" />
+            <input type="button" class="btn btn-secondary" value="Calls Report" id="callReport" />
+            <div class="mt-3" id="lblstatus"></div>
+        </div>
+    </div>
+
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/reports.js"></script>
+</body>
+</html>
